@@ -1,0 +1,124 @@
+/*
+Theme Name:   Isof Flower Shop Wordpress Theme
+Theme URI:    http://demo.isof.la/flowershop/
+Description:  Flower Shop theme for online shop woocommerce wordpress theme 
+Version:      1.0
+Author:       Isfot Team
+Collaborators: Diego Mesa
+Author URI:   http://www.isof.la/ 
+Text Domain:  flowershop-child
+Template:     emallshop
+*/
+
+@import url("../emallshop/style.css");
+
+/* Enter below your Customization CSS */
+
+/* #1 Adaptar el logo al header */
+#header .isof-wc__middle .header-logo {
+    margin: 0;
+    width: 200px;
+    position: relative;
+    top: -20px;
+    left: 30px;
+}
+
+/* #2 corregie tamaño de item de productos para que se vean mejor centrados */
+#home_productos .woocommerce.columns-3 li.product {
+    width: 30%;
+    box-sizing: border-box;
+    padding: 2%;
+    margin-left: 3%;
+}
+
+/* #3 corrige estilo de boton buscar */
+.search-area .search-bar-controls .search-btn {
+    border-radius: 0 22px 22px 0;
+    height: 40px;
+}
+
+/* #4 corregie ancho de servicios, para que se vena mejor centrados los 3 servicios*/
+#servicios {
+    padding: 10px 5%;
+}
+
+/* #5 Estilos para barra de cabecera de la pagina */
+
+#header.isof-wc__header {
+    height: 80px;
+    background: white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0px 1px 7px -3px #bbb;
+}
+
+.isof-wc__site-content {
+    padding-top: 100px; /*para compensar el fixed del header*/
+}
+
+#header .isof-wc__middle {
+    padding-top: 20px !important;
+    padding-bottom: 0px !important;
+}
+
+#header .isof-wc__middle .container {
+    width: 1330px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+#header .isof-wc__middle .header-right {
+    position: relative;
+    margin-top: -4px !important;
+}
+
+/*#6 Rediseño barra de busqueda , selector de categoria oculto*/
+.isof-wc__middle .search-area {
+    height: 50px;
+    margin-top: -4px;
+    left: -20%;
+}
+
+.isof-wc__middle .search-btn {
+    height: 49px !important;
+    width: 80px;
+    position: relative;
+    box-shadow: none;
+    margin: 0 !important;
+    top: -2px;
+    background: #dd187e;
+}
+
+.isof-wc__middle #product_cat {
+    display: none !important;
+}
+
+.isof-wc__middle .categories-filter.selectBox-dropdown {
+    display: none !important;
+}
+
+
+.isof-wc__middle .search-field-area input {
+    width: 100% !important;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 24px;
+    line-height: 50px;
+    font-size: 16px;
+}
+
+.isof-wc__middle span.twitter-typeahead {
+    width: 89%;
+    border-radius: 24px 0px 0px 24px;
+}
+
+/* Quitar barra "migas de pan"*/
+.header-navigation.isof-wc__header-navigation {
+    display: none;
+}
+
+
+.page-heading.page-heading-2 {
+    display: none !important;
+}
