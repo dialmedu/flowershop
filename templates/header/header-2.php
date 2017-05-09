@@ -48,9 +48,6 @@ if(emallshop_get_option('show-topbar', 1)==1):?>
 				<?php if( function_exists( 'emallshop_products_live_search_form' ) ) {
 					emallshop_products_live_search_form();
 				}?>
-			</div>
-			<div class="col-md-1">
-				
 			</div>                   
 			<div class="col-sm-2 col-md-2">
 				<div class="header-right">
