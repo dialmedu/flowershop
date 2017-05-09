@@ -19,8 +19,8 @@ Template:     emallshop
     margin: 0;
     width: 200px;
     position: relative;
-    top: -20px;
-    left: 30px;
+    top: -16px;
+    image-rendering: pixelated;
 }
 
 /* #2 corregie tamaño de item de productos para que se vean mejor centrados */
@@ -51,10 +51,11 @@ Template:     emallshop
     width: 100%;
     z-index: 999;
     box-shadow: 0px 1px 7px -3px #bbb;
+    top: -1px;
 }
 
 .isof-wc__site-content {
-    padding-top: 100px; /*para compensar el fixed del header*/
+    padding-top: 110px; /*para compensar el fixed del header*/
 }
 
 #header .isof-wc__middle {
@@ -70,24 +71,25 @@ Template:     emallshop
 
 #header .isof-wc__middle .header-right {
     position: relative;
-    margin-top: -4px !important;
+    margin-top: 4px !important;
 }
 
 /*#6 Rediseño barra de busqueda , selector de categoria oculto*/
 .isof-wc__middle .search-area {
     height: 50px;
-    margin-top: -4px;
+    margin-top: 4px;
     left: -20%;
 }
 
 .isof-wc__middle .search-btn {
-    height: 49px !important;
+    height: 51px !important;
     width: 80px;
     position: relative;
     box-shadow: none;
     margin: 0 !important;
     top: -2px;
     background: #dd187e;
+    left: 1px;
 }
 
 .isof-wc__middle #product_cat {
@@ -113,6 +115,20 @@ Template:     emallshop
     border-radius: 24px 0px 0px 24px;
 }
 
+.search-control-group .search-field-area .Typeahead-spinner
+{
+    display: none !important; /*no mostrar carga*/
+}
+
+.search-control-group  .empty-message.tt-suggestion.tt-selectable
+{
+    display: none !important; /*no mostar mensaje de vacio*/
+}
+
+.search-control-group .tt-menu
+{
+    display: none !important; /*no mostar mensaje de vacio*/
+}
 /* Quitar barra "migas de pan"*/
 .header-navigation.isof-wc__header-navigation {
     display: none;
@@ -121,4 +137,23 @@ Template:     emallshop
 
 .page-heading.page-heading-2 {
     display: none !important;
+}
+
+/* #7 agregar imagen de fondo a la barra de menu */
+.isof-wc__middle {
+    background: url(/wp-content/themes/flowershop-child/images/bg_h_floristeria_motivos.png) !important;
+    background-size: cover !important;
+    background-position: 30% !important;
+    position: relative !important;
+    background-repeat: no-repeat !important;
+}
+
+.isof-wc__middle:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    background: rgba(255, 255, 255, 0.9);
 }

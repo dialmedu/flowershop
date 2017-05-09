@@ -39,19 +39,19 @@ if(emallshop_get_option('show-topbar', 1)==1):?>
 <div class="header-middle isof-wc__middle">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3 col-md-3">
+			<div class="col-sm-3 col-md-2">
 				<?php if( function_exists( 'emallshop_header_logo' ) ) {
 					emallshop_header_logo();
 				}?>
-			</div>
-			<div class="espacio-h col-sm-1">
-				
 			</div>
 			<div class="col-sm-6 col-md-6">
 				<?php if( function_exists( 'emallshop_products_live_search_form' ) ) {
 					emallshop_products_live_search_form();
 				}?>
-			</div>                    
+			</div>
+			<div class="col-md-1">
+				
+			</div>                   
 			<div class="col-sm-2 col-md-2">
 				<div class="header-right">
 					<?php if( function_exists( 'emallshop_wishlist' ) ) {
