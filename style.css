@@ -11,43 +11,65 @@ Template:     emallshop
 */
 
 @import url("../emallshop/style.css");
-/*
-@font-face {
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: normal;
-   src: url("/wp-content/themes/flowershop-child/fonts/Roboto-Regular.ttf");
-}
 
 @font-face {
    font-family: Roboto;
+   font-weight: normal;
+   src: url("/wordpress/wp-content/themes/flowershop-child/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+   font-family: Amaranth;
+   font-weight: normal;
+   src: url("/wordpress/wp-content/themes/flowershop-child/fonts/HelloStarbucks.ttf");
+}
+
+
+@font-face {
+   font-family: Amaranth;
    font-style: normal;
    font-weight: bold;
-   src: url("/wp-content/themes/flowershop-child/fonts/Roboto-Medium.ttf");
+   src: url("/wordpress/wp-content/themes/flowershop-child/fonts/HelloStarbucks.ttf");
 }
 
 @font-face {
-   font-family: Roboto;
+   font-family: Amaranth;
    font-style: italic;
    font-weight: normal;
-   src: url("/wp-content/themes/flowershop-child/fonts/Roboto-LightItalic.ttf");
+   src: url("/wordpress/wp-content/themes/flowershop-child/fonts/HelloStarbucks.ttf");
 }
 
-**/
-
-html *
+html,body
 {
-    font-family: 'Roboto';
+    overflow-x: hidden;
+}
+
+html *,h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Amaranth','Open-Sans';
+
+}
+
+html p, html p strong,p,div
+{
+    font-family: 'Roboto','Open-Sans';
 }
 
 /* Enter below your Customization CSS */
+
+#header.isof-wc__header i:before, #header.isof-wc__header a, #header.isof-wc__header span {
+    color: white;
+}
+div#isof-wc__header-telefono {
+    font-size: 20px;
+}
 
 /* #1 Adaptar el logo al header */
 #header .isof-wc__middle .header-logo {
     margin: 0;
     width: 200px;
     position: relative;
-    top: -16px;
+    top: -7px;
     image-rendering: pixelated;
 }
 
@@ -73,12 +95,13 @@ html *
 /* #5 Estilos para barra de cabecera de la pagina */
 
 #header.isof-wc__header {
-    height: 80px;
-    background: white;
+    min-height: 80px;
+    background: #ff1c68;
     position: fixed;
     width: 100%;
     z-index: 999;
     box-shadow: 0px 1px 7px -3px #bbb;
+    margin-top: -1px;
 }
 
 .isof-wc__site-content {
@@ -86,14 +109,14 @@ html *
 }
 
 #header .isof-wc__middle {
-    padding-top: 20px !important;
+    padding-top: 13px !important;
     padding-bottom: 0px !important;
+    margin-top: -1px;
 }
 
 #header .isof-wc__middle .container {
-    width: 1330px;
-    min-width: 320px;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: none !important;
 }
 
 #header .isof-wc__middle .header-right {
@@ -167,7 +190,7 @@ html *
 }
 
 /* #7 agregar imagen de fondo a la barra de menu */
-.isof-wc__middle {
+/*.isof-wc__middle {
     background: url("/wordpress/wp-content/themes/flowershop-child/images/bg_h_floristeria_motivos.png") !important;
     background-size: cover !important;
     background-position: 30% !important;
@@ -175,34 +198,33 @@ html *
     background-repeat: no-repeat !important;
 }
 
+/*
 .isof-wc__middle:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
     width: 100%;
-    height: 96px;
+    height: 88px;
     background: rgba(255, 255, 255, 0.6);
 }
+*/
 
 /* #8 Rediseño de Producto Item */
 
 #home_productos  .product:hover {
-    border: 0px !important;
-    transform: scale(1.1);
-    transition-duration: .5s !important;
+    
 }
 
 #home_productos .product .product-image {
     position: relative;
-    /* margin-bottom: .5em; */
-    width: 220px;
+    max-width: 220px;
     margin: 0 auto;
-    height: 258px;
+    max-height: 258px;
     margin-bottom: 10px;
 }
-
-#home_productos .product .product-highlight {
+/* estilos para etiquetas nuevo y descuento */
+.product .product-highlight {
     bottom: 0;
     position: absolute;
     left: 0;
@@ -211,18 +233,18 @@ html *
     width: 100%;
 }
 
-#home_productos .product .product-highlight .new {
+.product .product-highlight .new {
     position: absolute;
     top: 0;
     left: 5px;
 }
-#home_productos .product .product-highlight .new span {
+.product .product-highlight .new span {
     content: "";
     font-size: 0;
     height: 0px;
     display: block;
 }
-#home_productos .product .product-highlight .new span:before {
+.product .product-highlight .new span:before {
     content: "Nuevo";
     display: block;
     font-size: 12px;
@@ -231,11 +253,12 @@ html *
     background: #04b06d;
     color: white;
     border-radius: 20px;
-    padding: 3px 12px;
+    padding: 3px;
+    padding-left: 12px;
     line-height: 20px;
 }
 
-#home_productos .product .product-highlight .onsale {
+.product .product-highlight .onsale {
     position: absolute;
     overflow: hidden !important;
     right: 5px;
@@ -243,7 +266,7 @@ html *
     height: 40px;
 }
 
-#home_productos .product .product-highlight .onsale span {
+.product .product-highlight .onsale span {
     overflow: hidden;
     width: 55px !important;
     display: block;
@@ -258,7 +281,7 @@ html *
     top: 3px;
 }
 
-#home_productos .product .product-highlight .onsale span:before {
+.product .product-highlight .onsale span:before {
     content: "-";
     position: absolute;
     left: -9px;
@@ -288,22 +311,23 @@ html *
     position: absolute;
     right: 50%;
     font-size: 17px;
-    color: #f34e79;
+    color: #ff1c68;
 }
 
 /* 8.1 Estilo de botones */
 
-#home_productos .product a.button.add_to_cart_button {
+.product .product-buttons a.button.add_to_cart_button {
     border-radius: 50px !important;
     padding: 14px 15px !important;
-    background: #f34e79;
+    background: #ff1c68;
 }
 
-#home_productos .product a.add_to_wishlist {
+.product .product-buttons a.add_to_wishlist
+{
     border: 0px !important;
 }
 
-#home_productos .product a.add_to_wishlist:hover {
+.product .product-buttons a.add_to_wishlist:hover {
     position: absolute !important;
     top: 1px !important;
     display: block;
@@ -313,15 +337,16 @@ html *
     height: 36px!important;
     background: #f34e79 !important;
 }
-#home_productos .product a.add_to_wishlist:before {
+
+.product .product-buttons a.add_to_wishlist:before {
     left: 35% !important;
     top: 32% !important;
 }
 
-#home_productos .product a.compare {
+.product .product-buttons a.compare {
     border: 0px !important;
 }
-#home_productos .product a.compare:hover {
+.product .product-buttons a.compare:hover {
     position: absolute !important;
     top: 1px !important;
     display: block;
@@ -331,25 +356,218 @@ html *
     height: 36px!important;
     background: #f34e79 !important;
 }
-#home_productos .product a.compare:before {
+.product .product-buttons a.compare:before {
     left: 35% !important;
     top: 32% !important;
 }
 
-#home_productos .product .product-buttons .quickview-button {
+.product .product-buttons .quickview-button {
     display: none !important;
 }
 
-#home_productos .product a.quickview {
+.product .product-buttons a.quickview {
     color: white !important;
     line-height: 20px;
     padding-left: 7px;
 }
 
-#home_productos .product a.quickview:before {
+.product .product-buttons a.quickview:before {
     color: white !important;
     font-size: 25px!important;
     position: relative;
     left: -5px;
     top: 4px;
+}
+
+/* producto ya agregados a la lista de deseos */
+.product .product-buttons .yith-wcwl-wishlistexistsbrowse.show a {
+    background: transparent !important;
+    border: 0px !important;
+}
+
+.product .product-buttons .yith-wcwl-wishlistexistsbrowse.show a:before {
+    color: #f34e79 !important;
+    font-size: 2rem;
+    top: 1rem;
+    content: "\f004" !important;
+}
+
+
+/* linea de productos */
+#linea_productos_imagenes {
+    position: relative;
+    top: -2.5rem;
+}
+
+/* BOTONES COMPRAR DE HEADER */
+.header-wishlist {
+    position: absolute;
+    left: 0;
+}
+
+.header-compare {
+    position: absolute;
+    left: 4rem;
+}
+
+.isof__wc__my-acount {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+}
+
+.isof__wc__my-acount a {
+    font-size: 16px;
+}
+
+.header-cart-content {
+    right: 20px;
+}
+
+.header-cart .fa-shopping-cart:before {
+    font-size: 50px !important;
+}
+
+/* 12 CORREGIR "muy blanco"*/
+#metodos_pago:before {
+    content: "";
+    width: 140vw;
+    left: -20vw;
+    display: block;
+    height: 110%;
+    background: #fbfbfb;
+    position: absolute;
+    box-shadow: inset 1px 1px 2px #bbb;
+}
+
+.isof-wc__title-section
+{
+    text-align: center;
+    font-size: 28px;
+    color: #dc167c;
+    font-weight: lighter;
+}
+
+/* #13 animacion hover linea de productos*/
+#linea_productos .image_linea:hover .wpb_content_element {
+    overflow: hidden;
+}
+
+#linea_productos .image_linea:hover img.size-full {
+   animation-name: hover_linea;
+   animation-duration: .5s;
+}
+
+@keyframes hover_linea
+{
+    0%
+    {
+        transform: scale(1);
+    }
+    100%
+    {
+        transform: scale(1.5);
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    #isof-wc__header-telefono span
+    {
+        color: #ff1c68 !important;
+    }
+
+    #header .isof-wc__middle {
+        padding-top: 4px !important;
+        padding-bottom: 11px !important;
+        margin-top: -1px;
+    }
+
+    #header.isof-wc__header {
+        background: white;
+    }
+
+    #isof-wc__header-telefono
+    {
+        min-width: 300px;
+        text-align: center;
+        display: block;
+    }
+    header#header {
+    position: relative !important;
+    margin-bottom: -80px;
+    padding-top: 80px;
+    }
+
+    div#isof-wc__header-botones {
+        position: absolute;
+        width: 160px;
+        right: 10px;
+        top: 20px;
+        z-index: 2;
+    }
+
+    #isof-wc__header-botones .header-cart-content {
+        position: fixed;
+        right: 10px;
+    }
+
+    #isof-wc__header-botones .header-cart-content .fa-shopping-cart:before {
+        font-size: 3rem !important;
+        color: white;
+    }
+
+    .isof__wc__my-acount a {
+        display: none !important;
+    }
+
+    #header .isof-wc__middle .header-logo {
+        width: 150px;
+        position: fixed;
+        top: 7px;
+        z-index: 2;
+    }
+
+    #header .isof-wc__middle:before {
+        width: 120vw;
+        content: "";
+        position: fixed;
+        left: -20vw;
+        display: block;
+        height: 80px;
+        background: #ff1c68;
+        top: -2vh;
+        box-shadow: 0px 1px 3px -1px #000;
+        z-index: 1;
+    }
+
+    div#isof-wc__header-search {
+        z-index: 0;
+    }
+
+    div#isof-wc__header-botones .fa-heart:before {
+        color: white !important;
+    }
+
+    div#isof-wc__header-botones .fa-refresh:before {
+        color: white !important;
+    }
+
+
+}
+
+
+/* #13 Numeros de conteo en botones de la cabecera*/
+.wishlist-count,.compare-count,.cart-count {
+    font-size: 16px !important;
+    padding: 6px !important;
+    top: -7px !important;
+    right: -2px !important;
+    line-height: 7px !important;
+}
+
+/* #14 Estilo caja de categorias en el home */
+#home_productos .woocommerce.widget_product_categories {
+    padding: 16px !important;
+    border-top: 5px solid #ff1c68 !important;
 }

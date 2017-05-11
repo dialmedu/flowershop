@@ -39,17 +39,30 @@ if(emallshop_get_option('show-topbar', 1)==1):?>
 <div class="header-middle isof-wc__middle">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3 col-md-2">
+			<div class="col-md-2" id="isof-wc__header-logo">
 				<?php if( function_exists( 'emallshop_header_logo' ) ) {
 					emallshop_header_logo();
 				}?>
 			</div>
-			<div class="col-sm-6 col-md-6">
+			<div class="col-md-4" id="isof-wc__header-search">
 				<?php if( function_exists( 'emallshop_products_live_search_form' ) ) {
 					emallshop_products_live_search_form();
 				}?>
-			</div>                   
-			<div class="col-sm-2 col-md-2">
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="isof-wc__telefono col-md-3" id="isof-wc__header-telefono">
+				<div class="col-md-12">
+					<span>Llamanos en Colombia</span>
+				</div>
+				<div class="isof-wc__telefono__icono col-md-2">
+					
+				</div>
+				<div class="isof-wc__telefono__numeros col-md-10">
+					<span class="bfh-phone" data-format="+57 (ddd) ddd-dddd" data-number="573132655555">+57 313 265 5555</span>
+				</div>
+			</div>               
+			<div class="col-sm-6 col-md-2" id="isof-wc__header-botones">
 				<div class="header-right">
 					<?php if( function_exists( 'emallshop_wishlist' ) ) {
 						emallshop_wishlist();
@@ -61,7 +74,7 @@ if(emallshop_get_option('show-topbar', 1)==1):?>
 						emallshop_header_cart();
 					}?>
 					<span class="isof__wc__my-acount">
-						<a href="http://wordpress.isoft.la/index.php/mi-cuenta/">Mi Cuenta</a>
+						<a href="/wordpress/mi-cuenta/">Mi Cuenta</a>
 					</span>
 				</div>
 			</div>
