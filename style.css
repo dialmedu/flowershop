@@ -15,13 +15,13 @@ Template:     emallshop
 @font-face {
    font-family: Roboto;
    font-weight: normal;
-   src: url("/wordpress/wp-content/themes/flowershop-child/fonts/Roboto-Regular.ttf");
+   src: url("../flowershop-child/fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
    font-family: Amaranth;
    font-weight: normal;
-   src: url("/wordpress/wp-content/themes/flowershop-child/fonts/HelloStarbucks.ttf");
+   src: url("../flowershop-child/fonts/HelloStarbucks.ttf");
 }
 
 
@@ -29,14 +29,14 @@ Template:     emallshop
    font-family: Amaranth;
    font-style: normal;
    font-weight: bold;
-   src: url("/wordpress/wp-content/themes/flowershop-child/fonts/HelloStarbucks.ttf");
+   src: url("../flowershop-child/fonts/HelloStarbucks.ttf");
 }
 
 @font-face {
    font-family: Amaranth;
    font-style: italic;
    font-weight: normal;
-   src: url("/wordpress/wp-content/themes/flowershop-child/fonts/HelloStarbucks.ttf");
+   src: url("../flowershop-child/fonts/HelloStarbucks.ttf");
 }
 
 html,body
@@ -475,6 +475,10 @@ div#isof-wc__header-telefono {
     #isof-wc__header-telefono span
     {
         color: #ff1c68 !important;
+    }
+
+    .search-area {
+        border: 2px solid #e9e9e9 !important;
     }
 
     #header .isof-wc__middle {
