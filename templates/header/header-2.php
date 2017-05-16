@@ -53,7 +53,7 @@ if(emallshop_get_option('show-topbar', 1)==1):?>
 			</div>
 			<div class="isof-wc__telefono col-md-3" id="isof-wc__header-telefono">
 				<div class="col-md-12">
-					<span>Llamanos en Colombia</span>
+					<span>Llámanos en Colombia</span>
 				</div>
 				<div class="isof-wc__telefono__icono col-md-2">
 					
