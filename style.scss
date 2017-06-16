@@ -7,8 +7,9 @@ Author:       Isfot Team
 Collaborators: Diego Mesa
 Author URI:   http://www.isof.la/ 
 Text Domain:  flowershop-child
-Template:     emallshop
+Template:     flowershop-child
 */
+
 
 @import url("../emallshop/style.css");
 
@@ -122,7 +123,7 @@ div#isof-wc__header-telefono {
 }
 
 .isof-wc__site-content {
-    padding-top: 90px; /*para compensar el fixed del header*/
+    padding-top: 35px; /*para compensar el fixed del header*/
 }
 
 
@@ -490,6 +491,27 @@ div#isof-wc__header-telefono {
 
 
 @media screen and (max-width: 1024px) {
+    div#isof-wc__header-search {
+        padding-left: 3rem;
+    }
+
+    .add_to_cart_button.ajax_add_to_cart {
+        font-size: 11px;
+    }
+
+    .header-logo:before {
+        display: block;
+        content: "";
+        background: white;
+        height: 77px;
+        width: 130%;
+        border-radius: 0px 100px 100px 0px;
+        position: absolute;
+        z-index: -1;
+        top: -15px;
+        left: -20%;
+    }
+
     #isof-wc__header-telefono span
     {
         color: #ff1c68 !important;
@@ -605,3 +627,64 @@ div#isof-wc__header-logo:after {
     z-index: -1;
     border-radius: 0px 50px 50px 0px;
 }
+
+.cart-item-detail a, .cart-item-detail span {
+    color: #4e4e4e !important;
+}
+
+.woocommerce .woocommerce-info {
+    border-top-color: #ec008c;
+    background: #822b91;
+    color: white;
+    font-size: 1.8rem;
+    line-height: 1rem;
+}
+.woocommerce .woocommerce-info a {
+    color: white;
+    text-decoration: underline;
+    margin: 0 1rem;
+    font-weight: lighter;
+}
+
+h1.isfo-wc__page-title {
+    background: #ec008c;
+    margin: 0;
+    padding: 2rem;
+    color: white;
+    border-bottom: 1px solid;
+}
+
+nav.woocommerce-MyAccount-navigation {
+    background: #ec008c;
+    margin: 0;
+}
+
+nav.woocommerce-MyAccount-navigation ul {
+    margin: 0;
+}
+
+.woocommerce-MyAccount-content {
+    padding: 2rem;
+    padding-top: 4rem;
+    min-height: 50vh;
+    border-bottom: 1px solid #ec008c;
+    margin-bottom: 3rem;
+    background: #f7f7f7;
+    box-shadow: inset 0px 3px 6px -3px #bbb;
+}
+
+nav.woocommerce-MyAccount-navigation ul li a {
+    background: #ec008c;
+    text-decoration: underline;
+}
+
+nav.woocommerce-MyAccount-navigation ul li a:before {
+    content: "\f0da";
+    font-family: FontAwesome;
+    margin: 0px 5px;
+}
+
+nav.woocommerce-MyAccount-navigation ul li {
+    width: 15%;
+}
+
